@@ -27,5 +27,8 @@ export default {
     	  =1 {has # comment}
     	  other {has # comments}
     	} as of {date}`,
+    editPost: 'Edit Post',
+    thumbUpPost: 'Thumb Up Post',
+    thumbDownPost: 'Thumb Down Post',    
   },
 };
