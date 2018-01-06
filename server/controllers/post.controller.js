@@ -90,7 +90,7 @@ export function editPost(req, res) {
 }
 
 export function thumbUpPost(req, res) {
-  Post.update({ cuid: req.params.cuid }, req.body.post.votes).exec((err, post) => {
+  Post.findOneAndUpdate({ cuid: req.params.cuid }, { $inc: { votes: 1 } }).exec((err, post) => {
     if (err) {
       res.status(500).send(err);
     }
@@ -99,7 +99,7 @@ export function thumbUpPost(req, res) {
 }
 
 export function thumbDownPost(req, res) {
-  Post.update({ cuid: req.params.cuid }, req.body.post.votes).exec((err, post) => {
+  Post.findOneAndUpdate({ cuid: req.params.cuid }, { $inc: { votes: -1 } }).exec((err, post) => {
     if (err) {
       res.status(500).send(err);
     }
