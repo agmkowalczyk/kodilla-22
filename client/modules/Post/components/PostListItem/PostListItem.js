@@ -17,10 +17,10 @@ function PostListItem(props) {
       <p className={styles['post-desc']}>{props.post.content}</p>
       <p className={styles['post-action']}><a href="#" onClick={props.onDelete}><FormattedMessage id="deletePost" /></a></p>
 
-      <p className="votes"><span>{props.post.votes} votes</span>
-        <button onClick={props.onThumbUpPost}> vote +1 </button>
-        <button onClick={props.onThumbDownPost}> vote -1</button>
-      </p>
+      <div className={styles['votes']}><span>{props.post.votes} votes</span>
+        <button className="fa fa-thumbs-o-up" onClick={props.onThumbUpPost}></button>
+        <button className="fa fa-thumbs-o-down" onClick={props.onThumbDownPost}></button>
+      </div>
       <hr className={styles.divider} />
     </div>
   );

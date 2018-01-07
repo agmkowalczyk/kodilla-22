@@ -119,3 +119,8 @@ textarea {
     color: #555;
 }
 
+.votes button {
+    margin-left: 15px;
+    padding: 4px;
+    width: 60px;
+}
